@@ -1,0 +1,1 @@
+I wonder if there is a quicker way to push to git.
