@@ -1,1 +1,2 @@
 Git can link itself directly to R Studio. 
+I now know how to commit and push to Git. 
