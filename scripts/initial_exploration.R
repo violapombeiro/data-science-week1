@@ -37,6 +37,8 @@ mosquito_egg_raw |>
 # - How many observations?
 #   
 # - Anything surprising?
-#   
+#   Site collection numbers stem from syntax issues.
 # - Any obvious problems?
-#
+#   Sites have issues with syntax - Site-A/Site A, HIGH_DOSE / Dose
+# - body_mass_mg has a lowest value of -93.0 - this is impossible
+# - Some values are N/A - check entry fields
