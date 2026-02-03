@@ -1,0 +1,9 @@
+1. There are two collection date entries where the value is outside of the range outlined in the metadata.
+
+2. The dataset has entry issues with strings, such as for treatment: "High_Dose" vs "High_dose", creating 2 separate data points. 
+
+3. There are problems with N/A entries in all parts of the data set. 
+
+4. There is a data antry with 91 eggs laid as a control, it could just be an anomaly? (70 is max expected from control)
+
+5. There are similar string issue entries for site values, with entries such as "site_c" and "Site-C"
