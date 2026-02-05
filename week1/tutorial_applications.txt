@@ -139,3 +139,106 @@ Why is it important to know what type of missing data we have?
 It can reveal issues with data collection, equipent issues or relationships
 with missing variables 
 ================================================================================
+================================================================================
+TUTORIAL 4: CHECKING DUPLICATES - APPLICATION CHECKLIST
+================================================================================
+
+[ ] I completed the tutorial exercises
+
+
+CONNECTING TO MY DATA:
+----------------------
+
+1. Did I identify any duplicate-related questions in my Week 1 questions list?
+
+   [ ] YES - Question #(s): ___________
+   [X] NO - But I'll check anyway
+
+
+3. Think about consequences:
+
+   If I remove duplicates, what am I assuming?
+   
+   
+   If duplicates are actually repeated measures, what should I do instead?
+   [ ] Keep them - they're legitimate observations
+   [x] Flag them for later analysis that accounts for non-independence
+   [ ] Other: ___________
+   
+   
+================================================================================
+TUTORIAL 5: NUMERIC & CROSS-VARIABLE CONSISTENCY - APPLICATION CHECKLIST
+================================================================================
+
+[ ] I completed the tutorial exercises
+
+
+PART A: NUMERIC PLAUSIBILITY
+-----------------------------
+
+1. Did I identify any numeric plausibility questions in my Week 1 questions list?
+
+   [x] YES - Question #(s): 4
+   [ ] NO - Skip to Part B
+
+
+2. If YES, which numeric variable looks suspicious?
+
+   Variable name: body_mass_mg 
+   
+   Minimum value: -92.9  | Is this biologically possible? [ ] Yes [x] No [ ] Unsure
+   Maximum value: 108  | Is this biologically possible? [x] Yes [ ] No [ ] Unsure
+   
+
+   Why do these look wrong?
+   [x] Negative value (impossible for this measurement)
+   [ ] Zero (should be NA instead)
+   [ ] Too large (exceeds known biological maximum)
+   [ ] Too small (below known biological minimum)
+   [ ] Possible units confusion (mixed kg and g?)
+   [ ] Other: ___________
+
+
+
+PART B: CROSS-VARIABLE CONSISTENCY
+-----------------------------------
+
+4. Did I identify any cross-variable questions in my Week 1 questions list?
+
+   [ ] YES - Question #(s): ___________
+   [x] NO - But I'll check anyway
+
+
+5. Choose TWO variables that should be related (e.g., body length and body mass,
+   sex and reproductive status, species and location):
+
+   Variable 1: body_mass_mg
+   Variable 2: eggs_laid
+   
+   What relationship do I expect between them?
+   [x] Positive correlation (both increase together)
+   [ ] Negative correlation (one increases, other decreases)
+   [ ] Biological constraint (certain combinations impossible)
+   [ ] Spatial constraint (certain combinations shouldn't occur)
+   [ ] Other: ___________
+   
+   Describe the expected relationship:
+   They should have a positive correlation together as a bigger mass is an 
+   evolutionary advantage -> more eggs laid
+
+
+6. Think about consequences:
+
+   If these variables are inconsistent, what should I do?
+   [ ] Remove the observations
+   [ ] Convert one variable to NA (which one? _________)
+   [x] Flag for review but keep both
+   [ ] Query the data collector
+   [ ] Other: ___________
+   
+   Justification:
+   Could just be a sign of maladapted data processing, or outliers, etc that 
+   need to be removed.
+
+
+================================================================================
