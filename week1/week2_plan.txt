@@ -1,0 +1,58 @@
+WEEK 2 CLEANING PLAN
+====================
+Name: Erik Pombeiro Dias
+Date: 05/02/2026
+
+I've completed all 5 tutorials and application checklists.
+
+Looking across all my checklists, these are the 2 most important issues 
+to address in Week 2:
+
+
+ISSUE 1 (Most Important)
+-------------------------
+Brief description: String values with inconsistent formatting
+
+Which tutorial provides the solution: [strings]
+
+Which variable(s) affected: [site,treatment]
+
+Why this is important to fix: [Biological/analytical reason]
+Causes analytical problems as it causes data in the same categories to appear separate
+
+What I plan to do: [The technique I'll use, in plain English]
+Using conditional changes, case_when, to replace the strings to consistent values
+
+
+ISSUE 2 (Second Most Important)
+--------------------------------
+Brief description: [What's the problem? 1 sentence]
+Numeric issues, values are negative when it is impossible
+
+Which tutorial provides the solution: [Tutorial name/number]
+
+Which variable(s) affected: [numeric consistency]
+
+Why this is important to fix: [Biological/analytical reason]
+Biologically is impossible, and causes issues in analysis
+
+What I plan to do: [The technique I'll use, in plain English]
+Flip the values to positive.
+
+
+OTHER ISSUES I NOTICED (but won't fix in Week 2)
+-------------------------------------------------
+- [Issue 3 - will address later if time]
+- [Issue 4 - uncertain how to handle]
+- [Issue 5 - decided to leave as-is because...]
+
+
+QUESTIONS TO DISCUSS IN WEEK 2
+-------------------------------
+Things I'm still unsure about:
+
+1. 
+
+2. 
+
+3.
