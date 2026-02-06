@@ -96,19 +96,22 @@ mosquito_egg_data_step1 <- mosquito_egg_data_step1 |>
   # standardising the answers
   
   
-  # FIX 2: [Issue description]  ====
+  # FIX 2: body_mass_mg has values which are negative -
+  #it is physically impossible to have these values, must be removed
 
 # Show the problem:
-# [Code]
+mosquito_egg_data_step1 |> 
+  summarise(
+    min_mass = min(body_mass_mg, na.rm = TRUE))
 
 # Fix it:
-mosquito_egg_data_step2 <- mosquito_egg_data_step1 |>
-  # YOUR CODE
-  
+mosquito_egg_data_step2 <- mosquito_egg_data_step1 |> 
+    filter(body_mass_mg > 0)
   
   # Verify it worked:
-  # [Code]
+mosquito_egg_data_step2 |> 
+  summarise(
+    min_mass = min(body_mass_mg, na.rm = TRUE))
   
   # What changed and why it matters:
-  # [2-3 sentences]
-  #
+  # The negative values have been removed, removing invalid results.
