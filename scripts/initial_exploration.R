@@ -98,6 +98,7 @@ mosquito_egg_data_step1 <- mosquito_egg_data_step1 |>
   
   # FIX 2: body_mass_mg has values which are negative -
   #it is physically impossible to have these values, must be removed
+  #Masses below 10mg are also removed due to being biologically impossible
 
 # Show the problem:
 mosquito_egg_data_step1 |> 
@@ -106,7 +107,7 @@ mosquito_egg_data_step1 |>
 
 # Fix it:
 mosquito_egg_data_step2 <- mosquito_egg_data_step1 |> 
-    filter(body_mass_mg > 0)
+    filter(body_mass_mg >= 10)
   
   # Verify it worked:
 mosquito_egg_data_step2 |> 
@@ -115,3 +116,42 @@ mosquito_egg_data_step2 |>
   
   # What changed and why it matters:
   # The negative values have been removed, removing invalid results.
+
+#Fixes implemented in partner work
+
+# FIX 3: [Which variables have the most missing values and 
+#how does missingness affect grouped summaries like mean(body_mass_mg) by
+#species when na.rm=FALSE vs na.rm=TRUE?] ====
+
+# Show the problem:
+# [Code to demonstrate issue exists]
+mosquito_egg_raw |>
+  filter(if_any(everything(), is.na))
+
+# Fix it:
+# YOUR CODE HERE
+#dropping all null values
+mosquito_egg_data_step2 <- mosquito_egg_data_step2 |>
+  drop_na() 
+
+# Verify it worked:
+# [Code to check change happened]
+glimpse(mosquito_egg_data_step2)  
+
+# What changed and why it matters:
+# [2-3 sentences explaining consequences]
+# The null values were removed. this makes sure that the null values dont 
+#interfere with the summary statistics or data analysis done with the 
+#mosquito data.
+
+#Fix 4 - Removing Duplicates
+#Identifying the duplicates present
+mosquito_egg_data_step2 |>
+  get_dupes()
+
+#Removing duplicate files
+mosquito_egg_data_step2 <- mosquito_egg_data_step2 |> 
+  filter(!duplicated(across(everything()))) 
+
+mosquito_egg_data_step2 |>
+  get_dupes()  # Rechecking for additional duplicates
